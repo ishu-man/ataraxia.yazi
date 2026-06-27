@@ -25,8 +25,12 @@ To set it as your dark flavor, change the content of your `theme.toml` to:
 dark = "ataraxia"
 ```
 
-Make sure your `theme.toml` doesn't contain anything other than `[flavor]`, unless you want to override certain styles of this flavor.
+Make sure your `theme.toml` doesn't contain anything other than `ataraxia`, unless you want to override certain styles of this flavor.
 See the [Yazi flavor documentation](https://yazi-rs.github.io/docs/flavors/overview) for more details.
+
+## More Ataraxia
+
+There's a neovim colorscheme by the same name [here](https://github.com/ishu-man/ataraxia.nvim). Ataraxia is my personal colorscheme and I plan to make a repository where I would add all of its ports (ex. the ghostty theme).
 
 ## License
 
