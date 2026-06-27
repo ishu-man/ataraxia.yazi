@@ -1,0 +1,164 @@
+# Ataraxia color palette:
+# --black: 					#100f0f;
+# --gray-0: 				#151414;
+# --gray-1: 				#201f1d;
+# --gray-2: 				#2b2927;
+# --gray-3: 				#403d3a;
+# --gray-4: 				#605c57;
+# --gray-5: 				#76706b;
+# --gray-6: 				#8c857d;
+# --gray-7: 				#9a948d;
+# --gray-8: 				#afa8a1;
+# --gray-9: 				#cec7c0;
+# --gray-10: 				#ddd6d0;
+# --white: 					#f4f0eb;
+# --red: 					#f47c71;
+# --red-light: 				#f5aaa3;
+# --orange: 				#f9a362;
+# --orange-light: 			#fbc69d;
+# --yellow: 				#f9bd5d;
+# --yellow-light: 			#fbd79d;
+# --green: 					#76e076;
+# --green-light: 			#acecac;
+# --cyan: 					#66e5d0;
+# --cyan-light: 			#a8f0e4;
+# --blue: 					#6aadf0;
+# --blue-light: 			#a2ccf6;
+# --magenta: 				#e963bc;
+# --magenta-light: 			#f2a6d9;
+# --green-alt: 				#64d88b;
+# --teal: 					#63e3a3;
+# --lime: 					#a3e85e;
+# --gold: 					#f9cf53;
+# --gold-light: 			#fbe49d;		
+# --purple: 				#d384fb;
+# --watermelon: 			#f95c76;
+# --sakura: 				#f7a0b6;
+# --steel: 					#88a3bf;
+# --smoke: 					#7b8a8a;
+# --mud: 					#d19561;
+# --dark-blue: 				#193857;	
+
+[mgr]
+marker_copied = { fg = "#76e076", bg = "#76e076" }
+marker_cut = { fg = "#f95c76", bg = "#f95c76" }
+marker_marked = { fg = "#d384fb", bg = "#d384fb" }
+marker_selected = { fg = "#f9a362", bg = "#f9a362" }
+
+cwd = { fg = "#76e076" } # feel free to change this to blue later.
+
+find_keyword = { fg = "#100f0f", bg = "#76e076" }
+find_position = {}
+
+count_copied = { fg = "#100f0f", bg = "#76e076" }
+count_cut = { fg = "#100f0f", bg = "#f95c76" }
+count_selected = { fg = "#100f0f", bg = "#f9a362" }
+
+border_symbol = "│"
+border_style = { fg = "#afa8a1" }
+
+[indicator]
+parent = { reversed = true }
+current = { reversed = true }
+preview = { reversed = true }
+padding = { open = "█", close = "█" }
+
+[tabs]
+active = { fg = "#100f0f", bg = "#76e076" }
+inactive = { fg = "#76e076", bg = "#2b2927" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#100f0f", bg = "#76e076" }
+normal_alt = { fg = "#76e076", bg = "#2b2927" }
+select_main = { fg = "#100f0f", bg = "#d384fb" }
+select_alt = { fg = "#d384fb", bg = "#2b2927" }
+unset_main = { fg = "#100f0f", bg = "#f9a362" }
+unset_alt = { fg = "#f9a362", bg = "#2b2927" }
+
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+overall = { fg = "#f4f0eb", bg = "#2b2927" }
+
+progress_label = { fg = "#f4f0eb", bg = "#403d3a", bold = true }
+progress_normal = { fg = "#76e076", bg = "#403d3a" }
+progress_error = { fg = "#f95c76", bg = "#403d3a" }
+
+perm_type = { fg = "#76e076" }
+perm_read = { fg = "#f9bd5d" }
+perm_write = { fg = "#f47c71" }
+perm_exec = { fg = "#6aadf0" }
+perm_sep = { fg = "#76706b" }
+
+
+[pick]
+border = { fg = "#7b8a8a" }
+active = { fg = "#d384fb", bold = true }
+inactive = {}
+
+[input]
+border = { fg = "#7b8a8a" }
+title = {}
+value = {}
+selected = { reversed = true }
+
+[completion]
+border = { fg = "#7b8a8a" }
+active = { reversed = true }
+inactive = {}
+
+[tasks]
+border = { fg = "#7b8a8a" }
+title = {}
+hovered = { fg = "#d384fb" }
+
+[which]
+cols = 2
+separator = " - "
+separator_style = { fg = "#8c857d" }
+mask = { bg = "#151414" }
+rest = { fg = "#9a948d" }
+cand = { fg = "#76e076" }
+desc = { fg = "#76706b" }
+
+[help]
+on = { fg = "#66e5d0" }
+run = { fg = "#d384fb" }
+desc = {}
+hovered = { reversed = true, bold = true }
+footer = { fg = "#100f0f", bg = "#f4f0eb" }
+
+[notify]
+title_info = { fg = "#76e076" }
+title_warn = { fg = "#f9a362" }
+title_error = { fg = "#f47c71" }
+
+[filetype]
+rules = [
+# images
+{ mime = "image/*", fg = "#f9bd5d" },
+
+# media
+{ mime = "{audio,video}/*", fg = "#d384fb" },
+
+# archives
+{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#f95c76" },
+
+# documents
+{ mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#66e5d0" },
+
+# broken links
+{ url = "*", is = "orphan", fg = "#f47c71" },
+
+# executables
+{ url = "*", is = "exec", fg = "#a3e85e" },
+
+# fallback
+{ url = "*", fg = "#f4f0eb" },
+{ url = "*/", fg = "#76e076" }, # directories
+
+]
