@@ -13,7 +13,7 @@
 ## Installation
 
 ```sh
-ya pkg add ishu-man/ataraxia.yazi 
+ya pkg add ishu-man/ataraxia
 ```
 
 ## Usage
